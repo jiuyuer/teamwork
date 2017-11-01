@@ -18,10 +18,9 @@ npm run build
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
+# 目录
 
-.
 ├── build/               # Webpack 配置目录
 ├── dist/                # build 生成的生产环境下的项目
 ├── src/                 # 源码目录（开发都在这里进行）
