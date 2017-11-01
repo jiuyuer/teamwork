@@ -19,8 +19,8 @@ npm run build --report
 ```
 
 
-# 目录
-
+## 目录结构
+``` bash
 ├── build/               # Webpack 配置目录
 ├── dist/                # build 生成的生产环境下的项目
 ├── src/                 # 源码目录（开发都在这里进行）
