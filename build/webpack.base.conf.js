@@ -28,7 +28,8 @@ module.exports = {
     // 别名，方便引用模块，例如有了别名之后，
     // import Vue from 'vue/dist/vue.common.js'可以写成 import Vue from 'vue'
     alias: {
-      '@': resolve('src'),
+      '@': resolve('src'),  // 比如@就代表直接从/src 下开始找起!!!
+      //"~": resolve("src/components")
     }
   },
   // 不同类型模块的处理规则

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="project-body">
         <Subnavbar></Subnavbar>
         <Tasklist></Tasklist>
     </div>

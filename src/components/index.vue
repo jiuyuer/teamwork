@@ -1,29 +1,50 @@
 <template>
     <div class="content">
-        <h3>内容</h3>
-        <p>tlsdklfjsldfjskdjflsjdf</p>
+        <ul>
+          <li v-for="item in projectArr" :key="item.id">
+            <!-- <img src="http://wx3.sinaimg.cn/mw690/6d794e8ely1fl7j4qgbyrj20m80xcwkp.jpg"/> -->
+            <a href="javascript:" @click="linkToDetail(item)">{{item.projectName}}</a>
+            <p>{{item.projectCreateTime | dateTimeFormatter('YYYY-MM-DD HH:mm:ss')}}</p>
+          </li>
+        </ul>
+        <memberSel></memberSel>
     </div>
 </template>
 
 <script>
-    export default {
-        name:'Portal'
-    }
-</script>
+import memberSel from "@/views/subNav/_components/memberSel";
+import http from "@/services/xhr";
+import apiSetting from "@/services/api";
 
-<style lang="less">
-  @color: red;
-  @f-14: 14px;
-  @f-26: 26px;
-  .content {
-    color: @color;
+export default {
+  name: "Portal",
+  data() {
+    return {};
+  },
+  computed: {
+    projectArr() {
+      return this.$store.state.projectList;
+    }
+  },
+  mounted() {
+    http(apiSetting.getProjects).then(
+      res => {
+        this.$store.commit("loadProject", res.data.data);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  },
+  methods: {
+    linkToDetail(item) {
+      this.$router.push({
+        path: "/project/" + item.projectId
+      });
+    }
+  },
+  components: {
+    memberSel: memberSel
   }
-  h3 {
-    color: @color;
-    font-size: @f-26;
-  }
-  p{
-    color: @color;
-    font-size: @f-14;
-  }
-</style>
+};
+</script>

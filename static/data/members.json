@@ -1,0 +1,210 @@
+{
+  "data": {
+    "access": {
+      "canAssign": false,
+      "canEditProgress": false
+    },
+    "members": [
+      {
+        "memberAccount": "jayzch@qq.com",
+        "memberIcon": "http://tinyapp.oss-cn-shanghai.aliyuncs.com/tinygroup/ebcff8990f6849f0826286295d39c6f7.png",
+        "memberId": "52d36c74b4034c988293ce81c3501415",
+        "memberJoinTime": 1483436022000,
+        "memberName": "Hulk",
+        "projectId": "8923674032767344391",
+        "projectMemberId": "1173184234549356433",
+        "roleList": [
+          {
+            "roleCreateTime": 1483436022000,
+            "roleCreatorId": "52d36c74b4034c988293ce81c3501415",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "admin",
+            "roleId": "8786038707651283045",
+            "roleName": "管理员",
+            "roleRemark": "",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          }
+        ],
+        "userNameAbbreviations": "Hulk",
+        "userNameFullPinyin": "Hulk"
+      },
+      {
+        "memberAccount": "geqy@hundsun.com",
+        "memberIcon": "//static.tinyapp.top/t_tinygroup/68c490cb4b83454f8b5ebd769b6dcd34.png",
+        "memberId": "39ac41e331a04455b1eacef58fd506a7",
+        "memberJoinTime": 1483493767000,
+        "memberName": "yuki|燕",
+        "projectId": "8923674032767344391",
+        "projectMemberId": "1422203334131421550",
+        "roleList": [
+          {
+            "roleCreateTime": 1483436022000,
+            "roleCreatorId": "52d36c74b4034c988293ce81c3501415",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "ordinary user",
+            "roleId": "2724921275774218784",
+            "roleName": "普通用户",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          },
+          {
+            "roleCreateTime": 1483436022000,
+            "roleCreatorId": "52d36c74b4034c988293ce81c3501415",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "admin",
+            "roleId": "8786038707651283045",
+            "roleName": "管理员",
+            "roleRemark": "",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          }
+        ],
+        "userNameAbbreviations": "yukiy",
+        "userNameFullPinyin": "yuki|yan"
+      },
+      {
+        "memberAccount": "ajian@hjian.net",
+        "memberIcon": "//static.tinyapp.top/t_tinygroup/10ec42e0a31642fa899827df0c866604.png",
+        "memberId": "b1bebe5c30a24ddaa9d60ba75f147b9e",
+        "memberJoinTime": 1483436121000,
+        "memberName": "黄剑",
+        "projectId": "8923674032767344391",
+        "projectMemberId": "1964574950377579211",
+        "roleList": [
+          {
+            "roleCreateTime": 1483436022000,
+            "roleCreatorId": "52d36c74b4034c988293ce81c3501415",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "admin",
+            "roleId": "8786038707651283045",
+            "roleName": "管理员",
+            "roleRemark": "",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          },
+          {
+            "roleCreateTime": 1483436022000,
+            "roleCreatorId": "52d36c74b4034c988293ce81c3501415",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "ordinary user",
+            "roleId": "2724921275774218784",
+            "roleName": "普通用户",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          }
+        ],
+        "userNameAbbreviations": "hj",
+        "userNameFullPinyin": "huangjian"
+      },
+      {
+        "memberAccount": "254523075@qq.com",
+        "memberIcon": "http://tinyapp.oss-cn-shanghai.aliyuncs.com/tinygroup/40db353fe46d4093a5d7ef25fe94c3f0.png",
+        "memberId": "a9492963ddf045f7b0e9363bcd47baf4",
+        "memberJoinTime": 1483436130000,
+        "memberName": "wangdl",
+        "projectId": "8923674032767344391",
+        "projectMemberId": "5234306321231384786",
+        "roleList": [
+          {
+            "roleCreateTime": 1483436022000,
+            "roleCreatorId": "52d36c74b4034c988293ce81c3501415",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "ordinary user",
+            "roleId": "2724921275774218784",
+            "roleName": "普通用户",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          },
+          {
+            "roleCreateTime": 1483436022000,
+            "roleCreatorId": "52d36c74b4034c988293ce81c3501415",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "admin",
+            "roleId": "8786038707651283045",
+            "roleName": "管理员",
+            "roleRemark": "",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          }
+        ],
+        "userNameAbbreviations": "wangdl",
+        "userNameFullPinyin": "wangdl"
+      },
+      {
+        "memberAccount": "295756457@qq.com",
+        "memberIcon": "//static.tinyapp.top/tinygroup/1a59d0686e734d23914e8fcdb20a7995.png",
+        "memberId": "df93437d18e54d97a6e0e6297ffe72c4",
+        "memberJoinTime": 1483436112000,
+        "memberName": "施晓峰",
+        "projectId": "8923674032767344391",
+        "projectMemberId": "5848711604612616655",
+        "roleList": [
+          {
+            "roleCreateTime": 1486613519000,
+            "roleCreatorId": "84a8f1093e8a41a3bab07f7ef68cf29a",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "member",
+            "roleId": "7843746750127470965",
+            "roleName": "成员",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          }
+        ],
+        "userNameAbbreviations": "sxf",
+        "userNameFullPinyin": "shixiaofeng"
+      },
+      {
+        "memberAccount": "18657159969",
+        "memberIcon": "http://tinyapp.oss-cn-shanghai.aliyuncs.com/tinygroup/c4ce8892ac2e4701832982ba51b09e48.png",
+        "memberId": "84a8f1093e8a41a3bab07f7ef68cf29a",
+        "memberJoinTime": 1483436077000,
+        "memberName": "悠然",
+        "projectId": "8923674032767344391",
+        "projectMemberId": "6650367597466447635",
+        "roleList": [
+          {
+            "roleCreateTime": 1483436022000,
+            "roleCreatorId": "52d36c74b4034c988293ce81c3501415",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "admin",
+            "roleId": "8786038707651283045",
+            "roleName": "管理员",
+            "roleRemark": "",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          }
+        ],
+        "userNameAbbreviations": "yr",
+        "userNameFullPinyin": "youran"
+      },
+      {
+        "memberAccount": "798804880@qq.com",
+        "memberIcon": "//static.tinyapp.top/tinygroup/7f550ff39bf04adc9fb341c3b73b5ae1.png",
+        "memberId": "7473659344306688877",
+        "memberJoinTime": 1483443407000,
+        "memberName": "周浩",
+        "projectId": "8923674032767344391",
+        "projectMemberId": "6905445562386940028",
+        "roleList": [
+          {
+            "roleCreateTime": 1486613519000,
+            "roleCreatorId": "84a8f1093e8a41a3bab07f7ef68cf29a",
+            "roleDeleteFlag": 1,
+            "roleEnglishName": "member",
+            "roleId": "7843746750127470965",
+            "roleName": "成员",
+            "roleTypeId": "949291021410851651",
+            "roleUsableFlag": 1
+          }
+        ],
+        "userNameAbbreviations": "zh",
+        "userNameFullPinyin": "zhouhao"
+      }
+    ]
+  },
+  "meta": {
+    "message": "ok",
+    "success": true
+  }
+}
