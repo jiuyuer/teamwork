@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Portal from '@/components'
-import Test from '@/components/test'
+import Test from '@/components/test/index.vue'
 import Detail from '@/views'
 import TaskDetail from '@/views/taskList/detail'
 
@@ -25,10 +25,12 @@ export default new Router({
     },
     {
       path: '/project/:id',
+      name: 'Detail',
       component: Detail,
       children: [
         {
           path: 'task/:taskId',
+          name: 'TaskDetail',
           component: TaskDetail
         }
       ]
