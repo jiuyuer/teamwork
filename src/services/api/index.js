@@ -1,18 +1,18 @@
 const serviceModule = {
   getProjects: {
-    url: '/static/data/projects.json',
+    url: '/sdpm/api/projects',
     method: 'get'
   },
   getProgress:{
-    url:'/static/data/progresses.json',
+    url:'/sdpm/api/projects/progresses',
     method: 'get'
   },
   getPage:{
-    url:'/static/data/page.json',
+    url:'/sdpm/api/projects/progresses/page',
     method: 'get'
   },
   getMembers:{
-    url:'/static/data/members.json',
+    url:'/sdpm/api/project/members',
     method: 'get'
   }
 }

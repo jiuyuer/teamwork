@@ -5,6 +5,9 @@
  * @return {String}
  */
 
+import moment from 'moment'
+import 'moment/locale/zh-cn'
+
 export default function dateTimeFormatter(timestamp, format = 'YYYY-MM-DD HH:mm:ss') {
-  return window.moment(timestamp).format(format)
+  return moment(timestamp).format(format)
 }

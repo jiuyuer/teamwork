@@ -23,6 +23,8 @@ const proxyMiddleware = require('http-proxy-middleware')
 // 开发环境下的webpack配置
 const webpackConfig = require('./webpack.dev.conf')
 
+const glob = require('glob')
+
 // default port where dev server listens for incoming traffic
 // dev-server 监听的端口，如果没有在命令行传入端口号，则使用config.dev.port设置的端口，例如8080
 const port = process.env.PORT || config.dev.port
@@ -110,6 +112,22 @@ var portfinder = require('portfinder')
 portfinder.basePort = port
 
 console.log('> Starting dev server...')
+
+// ----- 路由 && mock - 动态查找所有index.html页面 ----- //
+var files = glob.sync('./mock/*/mock.js');
+
+files.forEach(function (f) {
+  var fileHtmlPath = f.split('.')[1];
+  var mock = require('..' + fileHtmlPath + '.js');
+  var setOnline = mock.setOnline;
+
+  // 动态获取mock
+  setOnline.forEach(function (m) {
+    app[m.type](m.url, mock[m.name]);
+  });
+});
+
+
 // webpack-dev-middleware等待webpack完成所有编译打包之后输出提示语到控制台，表明服务正式启动
 // 服务正式启动才自动打开浏览器进入页面
 devMiddleware.waitUntilValid(() => {
