@@ -23,6 +23,7 @@ npm run build --report
 ``` bash
 ├── build/               # Webpack 配置目录
 ├── dist/                # build 生成的生产环境下的项目
+├── mock/                # mock数据，json文件
 ├── src/                 # 源码目录（开发都在这里进行）
 │   ├── assets/            # 放置需要经由 Webpack 处理的静态文件
 │   ├── components/        # 组件
