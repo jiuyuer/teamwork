@@ -44,14 +44,14 @@ const compiler = webpack(webpackConfig)
 // webpack-dev-middleware将webpack编译打包后得到的产品文件存放在内存中而没有写进磁盘
 // 将这个中间件挂到express上使用之后即可提供这些编译后的产品文件服务
 const devMiddleware = require('webpack-dev-middleware')(compiler, {
-  publicPath: webpackConfig.output.publicPath,  // 设置访问路径为webpack配置中的output里面所对应的路径
-  quiet: true   // 设置为true，使其不要在控制台输出日志
+  publicPath: webpackConfig.output.publicPath, // 设置访问路径为webpack配置中的output里面所对应的路径
+  quiet: true // 设置为true，使其不要在控制台输出日志
 })
 
 // webpack-hot-middleware，用于实现热重载功能的中间件
 const hotMiddleware = require('webpack-hot-middleware')(compiler, {
-  log: false,       // 关闭控制台的日志输出
-  heartbeat: 2000   // 发送心跳包的频率
+  log: false, // 关闭控制台的日志输出
+  heartbeat: 2000 // 发送心跳包的频率
 })
 // force page reload when html-webpack-plugin template changes
 // currently disabled until this is resolved:
@@ -76,7 +76,9 @@ Object.keys(proxyTable).forEach(function (context) {
   let options = proxyTable[context]
   // 格式化options，例如将'www.example.com'变成{ target: 'www.example.com' }
   if (typeof options === 'string') {
-    options = { target: options }
+    options = {
+      target: options
+    }
   }
   app.use(proxyMiddleware(options.filter || context, options))
 })
@@ -120,7 +122,7 @@ files.forEach(function (f) {
   var fileHtmlPath = f.split('.')[1];
   var mock = require('..' + fileHtmlPath + '.js');
   var setOnline = mock.setOnline;
-
+  console.log(mock);
   // 动态获取mock
   setOnline.forEach(function (m) {
     app[m.type](m.url, mock[m.name]);

@@ -83,7 +83,7 @@ const httpServer = (opts, data) => {
   } else {
     delete httpDefaultOpts.params
   }
-  
+
   /* 
    * 将异常部分直接封装到业务调用的 then 方法中
     promise(apiSetting.getProjects).then(

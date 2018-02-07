@@ -1,51 +1,58 @@
 <template>
-    <div class="content">
-      <el-row :gutter="20">
-        <el-col :span="8" v-for="(item, index) in projectArr" :key="item.index">
-          <el-card>
-            <div class="title"><a href="javascript:" @click="linkToProject(item)">{{item.projectName}}</a></div>
-            <div class="bottom clearfix">
-              <time class="time">{{item.projectCreateTime | dateTimeFormatter('YYYY-MM-DD')}}</time>
-            </div>
-            <div class="operate">
-              <el-button type="text" class="button" title="修改" @click="editProject(item)"><i class="el-icon-edit"></i></el-button>
-              <el-button type="text" class="button" title="删除" @click="deleteProject(index)"><i class="el-icon-delete"></i></el-button>
-            </div>
-          </el-card>
-        </el-col>
-        <el-col :span="8">
-          <el-card :style="{'text-align':'center'}"><el-button title="添加" @click="dialogVisible = true"><i class="el-icon-plus"></i></el-button></el-card>
-        </el-col>
-      </el-row>
-      <el-dialog
-        title="提示"
-        :visible.sync="dialogVisible"
-        width="70%">
-        <el-form ref="form" :model="formProject" label-width="80px">
-            <el-form-item label="项目名称">
-              <el-input v-model="formProject.name"></el-input>
-            </el-form-item>
-        </el-form>
-        <span slot="footer" class="dialog-footer">
-          <el-button @click="dialogVisible = false">取 消</el-button>
-          <el-button type="primary" @click="sureProject">确 定</el-button>
-        </span>
-      </el-dialog>
-    </div>
+  <div class="content">
+    <el-row :gutter="20">
+      <el-col :span="8" v-for="(item, index) in projectArr" :key="item.index">
+        <el-card>
+          <div class="title">
+            <a href="javascript:" @click="linkToProject(item)">{{item.projectName}}</a>
+          </div>
+          <div class="bottom clearfix">
+            <time class="time">{{item.projectCreateTime | dateTimeFormatter('YYYY-MM-DD')}}</time>
+          </div>
+          <div class="operate">
+            <el-button type="text" class="button" title="修改" @click="editProject(item)">
+              <i class="el-icon-edit"></i>
+            </el-button>
+            <el-button type="text" class="button" title="删除" @click="deleteProject(index)">
+              <i class="el-icon-delete"></i>
+            </el-button>
+          </div>
+        </el-card>
+      </el-col>
+      <el-col :span="8">
+        <el-card :style="{'text-align':'center'}">
+          <el-button title="添加" @click="dialogVisible = true">
+            <i class="el-icon-plus"></i>
+          </el-button>
+        </el-card>
+      </el-col>
+    </el-row>
+    <el-dialog title="提示" :visible.sync="dialogVisible" width="70%">
+      <el-form ref="form" :model="formProject" label-width="80px">
+        <el-form-item label="项目名称">
+          <el-input v-model="formProject.name"></el-input>
+        </el-form-item>
+      </el-form>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="sureProject">确 定</el-button>
+      </span>
+    </el-dialog>
+  </div>
 </template>
 
 <script>
-import http from "@/services/xhr";
-import apiSetting from "@/services/api";
+import http from '@/services/xhr';
+import apiSetting from '@/services/api';
 
 export default {
-  name: "Portal",
+  name: 'Portal',
   data() {
     return {
       dialogIsEdit: false,
       dialogVisible: false,
       formProject: {
-        name: ""
+        name: ''
       }
     };
   },
@@ -55,10 +62,10 @@ export default {
     }
   },
   mounted() {
-    http(apiSetting.getProjects).then(
+    http(apiSetting.getProjects, { aaa: 'sss' }).then(
       res => {
-        this.$store.commit("loadProject", res.data.data);
-        window.localStorage.setItem("projects",JSON.stringify(res.data.data));
+        this.$store.commit('loadProject', res.data.data);
+        window.localStorage.setItem('projects', JSON.stringify(res.data.data));
       },
       error => {
         console.log(error);
@@ -68,14 +75,17 @@ export default {
   methods: {
     linkToProject(item) {
       this.$router.push({
-        path: "/project/" + item.projectId
+        path: '/project/' + item.projectId
       });
     },
     deleteProject(index) {
-      this.$confirm("确认删除？")
+      this.$confirm('确认删除？')
         .then(_ => {
           this.$store.state.projectList.splice(index, 1);
-          window.localStorage.setItem("projects",JSON.stringify(this.$store.state.projectList));
+          window.localStorage.setItem(
+            'projects',
+            JSON.stringify(this.$store.state.projectList)
+          );
         })
         .catch(_ => {});
     },
@@ -95,22 +105,28 @@ export default {
       });
       if (this.dialogIsEdit) {
         this.$store.state.projectList.splice(len, 1, obj);
-        window.localStorage.setItem("projects",JSON.stringify(this.$store.state.projectList));
+        window.localStorage.setItem(
+          'projects',
+          JSON.stringify(this.$store.state.projectList)
+        );
       } else {
-        obj.projectId = (Math.random()*1000000).toFixed();
+        obj.projectId = (Math.random() * 1000000).toFixed();
         this.$store.state.projectList.push(obj);
-        window.localStorage.setItem("projects",JSON.stringify(this.$store.state.projectList));
+        window.localStorage.setItem(
+          'projects',
+          JSON.stringify(this.$store.state.projectList)
+        );
       }
       this.dialogIsEdit = false;
       this.dialogVisible = false;
-      this.formProject.name = "";
+      this.formProject.name = '';
     }
   }
 };
 </script>
 
 <style lang="less">
-@import "../../static/global.less";
+@import '../../static/global.less';
 .content {
   padding: 20px;
   .el-row {
