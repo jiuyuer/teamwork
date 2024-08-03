@@ -41,6 +41,7 @@
         <span slot="title">导航四</span>
       </el-menu-item>
     </el-menu>
+    <el-upload></el-upload>
   </div>
 </template>
 
